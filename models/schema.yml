@@ -12,11 +12,7 @@ sources:
           - name: date_date
             description: the date of purchase 
           - name: order_id
-            decription:  the id of the order 
-            tests: 
-              - unique
-              - not_null
-              
+            decription:  the id of the order    
           - name: product_id
             description: the id of the product
           - name: revenue
@@ -30,7 +26,10 @@ sources:
         columns:
           - name: products_id
             description: the id of the products.
-          - name: purchSE_PRICE
+            tests:
+              - unique
+              - not_null   
+          - name: purchase_price
             description: the purchase price of the products.  
 
       - name: ship
@@ -39,6 +38,9 @@ sources:
         columns:
           - name: orders_id
             description:  the order id for ships
+            tests:
+              - unique
+              - not_null
           - name: shipping_fee
             description:  the fees of the ships
           - name:  logcost
