@@ -19,6 +19,9 @@ sources:
             description: the revenue of the product 
           - name: quantity
             description: the quantity of the product
+        tests:
+          - unique:
+              column_name: "(orders_id||'-'||pdt_id)"
 
       - name: product
         identifier: raw_gz_product
@@ -47,4 +50,3 @@ sources:
             description:  the logistic costs of ships
           - name: ship_cost
             description:  the ship costs
-        
